@@ -37,7 +37,7 @@
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="tailleInput" required>
                         <!-- Password -->
                         <input placeholder="Password" type="password" id="password" name="password" minlength="4"
-                            maxlength="8" class="tailleInput" required autocomplete="off">
+                            maxlength="8" class="tailleInput" onchange="passverif()" required autocomplete="off">
                         <!-- Password Verification-->
                         <input placeholder="Password check" type="password" id="password2" minlength="4" maxlength="8"
                             required autocomplete="off" class="tailleInput" onchange="passverif()" />
@@ -70,7 +70,7 @@
             var vpass = document.getElementById('password2').value;
             if (pass != vpass) {
                 document.getElementById('submit').setAttribute("disabled", "disabled");
-                document.getElementById('submit').style.background = "linear-gradient(#F79494, #DC1D06)";
+                document.getElementById('submit').style.background ="linear-gradient(#F79494, #DC1D06)";
                 alert('Attention Mots de passe incorecte ');
                 return false;
             } else {
